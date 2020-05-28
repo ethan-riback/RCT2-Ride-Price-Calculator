@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA8ACBEE247ECEDF008BC52E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACBED247ECEDF008BC52E /* AppDelegate.swift */; };
+		EA8ACBF0247ECEDF008BC52E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACBEF247ECEDF008BC52E /* SceneDelegate.swift */; };
+		EA8ACBF2247ECEDF008BC52E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACBF1247ECEDF008BC52E /* ContentView.swift */; };
+		EA8ACBF4247ECEE0008BC52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA8ACBF3247ECEE0008BC52E /* Assets.xcassets */; };
+		EA8ACBF7247ECEE0008BC52E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA8ACBF6247ECEE0008BC52E /* Preview Assets.xcassets */; };
+		EA8ACBFA247ECEE0008BC52E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA8ACBF8247ECEE0008BC52E /* LaunchScreen.storyboard */; };
+		EA8ACC05247ECEE0008BC52E /* RCT2_Ride_Price_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACC04247ECEE0008BC52E /* RCT2_Ride_Price_CalculatorTests.swift */; };
+		EA8ACC10247EE470008BC52E /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACC0F247EE470008BC52E /* RideType.swift */; };
+		EA8ACC12247EFBA2008BC52E /* PriceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACC11247EFBA2008BC52E /* PriceCalculator.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA8ACC01247ECEE0008BC52E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA8ACBE2247ECEDF008BC52E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA8ACBE9247ECEDF008BC52E;
+			remoteInfo = "RCT2 Ride Price Calculator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA8ACBEA247ECEDF008BC52E /* RCT2 Ride Price Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RCT2 Ride Price Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA8ACBED247ECEDF008BC52E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA8ACBEF247ECEDF008BC52E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EA8ACBF1247ECEDF008BC52E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EA8ACBF3247ECEE0008BC52E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA8ACBF6247ECEE0008BC52E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EA8ACBF9247ECEE0008BC52E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA8ACBFB247ECEE0008BC52E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA8ACC00247ECEE0008BC52E /* RCT2 Ride Price CalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RCT2 Ride Price CalculatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA8ACC04247ECEE0008BC52E /* RCT2_Ride_Price_CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCT2_Ride_Price_CalculatorTests.swift; sourceTree = "<group>"; };
+		EA8ACC06247ECEE0008BC52E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA8ACC0F247EE470008BC52E /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
+		EA8ACC11247EFBA2008BC52E /* PriceCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceCalculator.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA8ACBE7247ECEDF008BC52E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA8ACBFD247ECEE0008BC52E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA8ACBE1247ECEDF008BC52E = {
+			isa = PBXGroup;
+			children = (
+				EA8ACBEC247ECEDF008BC52E /* RCT2 Ride Price Calculator */,
+				EA8ACC03247ECEE0008BC52E /* RCT2 Ride Price CalculatorTests */,
+				EA8ACBEB247ECEDF008BC52E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA8ACBEB247ECEDF008BC52E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA8ACBEA247ECEDF008BC52E /* RCT2 Ride Price Calculator.app */,
+				EA8ACC00247ECEE0008BC52E /* RCT2 Ride Price CalculatorTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA8ACBEC247ECEDF008BC52E /* RCT2 Ride Price Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				EA8ACBED247ECEDF008BC52E /* AppDelegate.swift */,
+				EA8ACBEF247ECEDF008BC52E /* SceneDelegate.swift */,
+				EA8ACBF1247ECEDF008BC52E /* ContentView.swift */,
+				EA8ACC0F247EE470008BC52E /* RideType.swift */,
+				EA8ACC11247EFBA2008BC52E /* PriceCalculator.swift */,
+				EA8ACBF3247ECEE0008BC52E /* Assets.xcassets */,
+				EA8ACBF8247ECEE0008BC52E /* LaunchScreen.storyboard */,
+				EA8ACBFB247ECEE0008BC52E /* Info.plist */,
+				EA8ACBF5247ECEE0008BC52E /* Preview Content */,
+			);
+			path = "RCT2 Ride Price Calculator";
+			sourceTree = "<group>";
+		};
+		EA8ACBF5247ECEE0008BC52E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EA8ACBF6247ECEE0008BC52E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EA8ACC03247ECEE0008BC52E /* RCT2 Ride Price CalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA8ACC04247ECEE0008BC52E /* RCT2_Ride_Price_CalculatorTests.swift */,
+				EA8ACC06247ECEE0008BC52E /* Info.plist */,
+			);
+			path = "RCT2 Ride Price CalculatorTests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA8ACBE9247ECEDF008BC52E /* RCT2 Ride Price Calculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA8ACC09247ECEE0008BC52E /* Build configuration list for PBXNativeTarget "RCT2 Ride Price Calculator" */;
+			buildPhases = (
+				EA8ACBE6247ECEDF008BC52E /* Sources */,
+				EA8ACBE7247ECEDF008BC52E /* Frameworks */,
+				EA8ACBE8247ECEDF008BC52E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RCT2 Ride Price Calculator";
+			productName = "RCT2 Ride Price Calculator";
+			productReference = EA8ACBEA247ECEDF008BC52E /* RCT2 Ride Price Calculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA8ACBFF247ECEE0008BC52E /* RCT2 Ride Price CalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA8ACC0C247ECEE0008BC52E /* Build configuration list for PBXNativeTarget "RCT2 Ride Price CalculatorTests" */;
+			buildPhases = (
+				EA8ACBFC247ECEE0008BC52E /* Sources */,
+				EA8ACBFD247ECEE0008BC52E /* Frameworks */,
+				EA8ACBFE247ECEE0008BC52E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA8ACC02247ECEE0008BC52E /* PBXTargetDependency */,
+			);
+			name = "RCT2 Ride Price CalculatorTests";
+			productName = "RCT2 Ride Price CalculatorTests";
+			productReference = EA8ACC00247ECEE0008BC52E /* RCT2 Ride Price CalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA8ACBE2247ECEDF008BC52E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1140;
+				LastUpgradeCheck = 1140;
+				ORGANIZATIONNAME = "Ethan Riback";
+				TargetAttributes = {
+					EA8ACBE9247ECEDF008BC52E = {
+						CreatedOnToolsVersion = 11.4;
+					};
+					EA8ACBFF247ECEE0008BC52E = {
+						CreatedOnToolsVersion = 11.4;
+						TestTargetID = EA8ACBE9247ECEDF008BC52E;
+					};
+				};
+			};
+			buildConfigurationList = EA8ACBE5247ECEDF008BC52E /* Build configuration list for PBXProject "RCT2 Ride Price Calculator" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA8ACBE1247ECEDF008BC52E;
+			productRefGroup = EA8ACBEB247ECEDF008BC52E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA8ACBE9247ECEDF008BC52E /* RCT2 Ride Price Calculator */,
+				EA8ACBFF247ECEE0008BC52E /* RCT2 Ride Price CalculatorTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA8ACBE8247ECEDF008BC52E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8ACBFA247ECEE0008BC52E /* LaunchScreen.storyboard in Resources */,
+				EA8ACBF7247ECEE0008BC52E /* Preview Assets.xcassets in Resources */,
+				EA8ACBF4247ECEE0008BC52E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA8ACBFE247ECEE0008BC52E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA8ACBE6247ECEDF008BC52E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8ACBEE247ECEDF008BC52E /* AppDelegate.swift in Sources */,
+				EA8ACC12247EFBA2008BC52E /* PriceCalculator.swift in Sources */,
+				EA8ACBF0247ECEDF008BC52E /* SceneDelegate.swift in Sources */,
+				EA8ACBF2247ECEDF008BC52E /* ContentView.swift in Sources */,
+				EA8ACC10247EE470008BC52E /* RideType.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA8ACBFC247ECEE0008BC52E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA8ACC05247ECEE0008BC52E /* RCT2_Ride_Price_CalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA8ACC02247ECEE0008BC52E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA8ACBE9247ECEDF008BC52E /* RCT2 Ride Price Calculator */;
+			targetProxy = EA8ACC01247ECEE0008BC52E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA8ACBF8247ECEE0008BC52E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA8ACBF9247ECEE0008BC52E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA8ACC07247ECEE0008BC52E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA8ACC08247ECEE0008BC52E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA8ACC0A247ECEE0008BC52E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"RCT2 Ride Price Calculator/Preview Content\"";
+				DEVELOPMENT_TEAM = S8BP6ZGB2L;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "RCT2 Ride Price Calculator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ethan-Riback.RCT2-Ride-Price-Calculator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA8ACC0B247ECEE0008BC52E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"RCT2 Ride Price Calculator/Preview Content\"";
+				DEVELOPMENT_TEAM = S8BP6ZGB2L;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "RCT2 Ride Price Calculator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ethan-Riback.RCT2-Ride-Price-Calculator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EA8ACC0D247ECEE0008BC52E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S8BP6ZGB2L;
+				INFOPLIST_FILE = "RCT2 Ride Price CalculatorTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ethan-Riback.RCT2-Ride-Price-CalculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCT2 Ride Price Calculator.app/RCT2 Ride Price Calculator";
+			};
+			name = Debug;
+		};
+		EA8ACC0E247ECEE0008BC52E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S8BP6ZGB2L;
+				INFOPLIST_FILE = "RCT2 Ride Price CalculatorTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ethan-Riback.RCT2-Ride-Price-CalculatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RCT2 Ride Price Calculator.app/RCT2 Ride Price Calculator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA8ACBE5247ECEDF008BC52E /* Build configuration list for PBXProject "RCT2 Ride Price Calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA8ACC07247ECEE0008BC52E /* Debug */,
+				EA8ACC08247ECEE0008BC52E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA8ACC09247ECEE0008BC52E /* Build configuration list for PBXNativeTarget "RCT2 Ride Price Calculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA8ACC0A247ECEE0008BC52E /* Debug */,
+				EA8ACC0B247ECEE0008BC52E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA8ACC0C247ECEE0008BC52E /* Build configuration list for PBXNativeTarget "RCT2 Ride Price CalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA8ACC0D247ECEE0008BC52E /* Debug */,
+				EA8ACC0E247ECEE0008BC52E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA8ACBE2247ECEDF008BC52E /* Project object */;
+}
