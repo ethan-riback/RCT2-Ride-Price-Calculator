@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA567D0524C0E41400952A83 /* RideAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA567D0424C0E41400952A83 /* RideAge.swift */; };
+		EA567D0924C0E51D00952A83 /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA567D0824C0E51D00952A83 /* CheckView.swift */; };
+		EA567D0B24C0E5EB00952A83 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA567D0A24C0E5EB00952A83 /* CalculatorViewModel.swift */; };
 		EA8ACBEE247ECEDF008BC52E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACBED247ECEDF008BC52E /* AppDelegate.swift */; };
 		EA8ACBF0247ECEDF008BC52E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACBEF247ECEDF008BC52E /* SceneDelegate.swift */; };
-		EA8ACBF2247ECEDF008BC52E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACBF1247ECEDF008BC52E /* ContentView.swift */; };
+		EA8ACBF2247ECEDF008BC52E /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACBF1247ECEDF008BC52E /* CalculatorView.swift */; };
 		EA8ACBF4247ECEE0008BC52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA8ACBF3247ECEE0008BC52E /* Assets.xcassets */; };
 		EA8ACBF7247ECEE0008BC52E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA8ACBF6247ECEE0008BC52E /* Preview Assets.xcassets */; };
 		EA8ACBFA247ECEE0008BC52E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA8ACBF8247ECEE0008BC52E /* LaunchScreen.storyboard */; };
@@ -29,10 +32,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA567D0424C0E41400952A83 /* RideAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideAge.swift; sourceTree = "<group>"; };
+		EA567D0824C0E51D00952A83 /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
+		EA567D0A24C0E5EB00952A83 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
 		EA8ACBEA247ECEDF008BC52E /* RCT2 Ride Price Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RCT2 Ride Price Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8ACBED247ECEDF008BC52E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA8ACBEF247ECEDF008BC52E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA8ACBF1247ECEDF008BC52E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EA8ACBF1247ECEDF008BC52E /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		EA8ACBF3247ECEE0008BC52E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA8ACBF6247ECEE0008BC52E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EA8ACBF9247ECEE0008BC52E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +68,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA567D0324C0E3D100952A83 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				EA8ACC11247EFBA2008BC52E /* PriceCalculator.swift */,
+				EA567D0424C0E41400952A83 /* RideAge.swift */,
+				EA8ACC0F247EE470008BC52E /* RideType.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		EA567D0624C0E44C00952A83 /* Calculator */ = {
+			isa = PBXGroup;
+			children = (
+				EA8ACBF1247ECEDF008BC52E /* CalculatorView.swift */,
+				EA567D0A24C0E5EB00952A83 /* CalculatorViewModel.swift */,
+			);
+			path = Calculator;
+			sourceTree = "<group>";
+		};
+		EA567D0724C0E50900952A83 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EA567D0824C0E51D00952A83 /* CheckView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		EA8ACBE1247ECEDF008BC52E = {
 			isa = PBXGroup;
 			children = (
@@ -83,11 +116,11 @@
 		EA8ACBEC247ECEDF008BC52E /* RCT2 Ride Price Calculator */ = {
 			isa = PBXGroup;
 			children = (
+				EA567D0324C0E3D100952A83 /* Core */,
+				EA567D0624C0E44C00952A83 /* Calculator */,
+				EA567D0724C0E50900952A83 /* Views */,
 				EA8ACBED247ECEDF008BC52E /* AppDelegate.swift */,
 				EA8ACBEF247ECEDF008BC52E /* SceneDelegate.swift */,
-				EA8ACBF1247ECEDF008BC52E /* ContentView.swift */,
-				EA8ACC0F247EE470008BC52E /* RideType.swift */,
-				EA8ACC11247EFBA2008BC52E /* PriceCalculator.swift */,
 				EA8ACBF3247ECEE0008BC52E /* Assets.xcassets */,
 				EA8ACBF8247ECEE0008BC52E /* LaunchScreen.storyboard */,
 				EA8ACBFB247ECEE0008BC52E /* Info.plist */,
@@ -215,10 +248,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA8ACBEE247ECEDF008BC52E /* AppDelegate.swift in Sources */,
+				EA567D0524C0E41400952A83 /* RideAge.swift in Sources */,
+				EA567D0B24C0E5EB00952A83 /* CalculatorViewModel.swift in Sources */,
 				EA8ACC12247EFBA2008BC52E /* PriceCalculator.swift in Sources */,
 				EA8ACBF0247ECEDF008BC52E /* SceneDelegate.swift in Sources */,
-				EA8ACBF2247ECEDF008BC52E /* ContentView.swift in Sources */,
+				EA8ACBF2247ECEDF008BC52E /* CalculatorView.swift in Sources */,
 				EA8ACC10247EE470008BC52E /* RideType.swift in Sources */,
+				EA567D0924C0E51D00952A83 /* CheckView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

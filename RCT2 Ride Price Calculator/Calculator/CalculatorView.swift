@@ -1,30 +1,27 @@
 //
-//  ContentView.swift
+//  CalculatorView.swift
 //  RCT2 Ride Price Calculator
 //
 //  Created by Ethan Riback on 5/27/20.
 //  Copyright © 2020 Ethan Riback. All rights reserved.
 //
 
+import Combine
 import SwiftUI
 
-struct ContentView: View {
-    // TODO: Implement these in a ViewModel class
-    @State var rideType: RideType = .selectARide
-    @State var excitement = ""
-    @State var intensity = ""
-    @State var nausea = ""
-    @State var hasSameTypeInPark = false
-    @State var isChargingEntryForPark = false
+struct CalculatorView: View {
+    @ObservedObject var viewModel: CalculatorViewModel
 
-    private let priceCalculator = PriceCalculator()
+    init(viewModel: CalculatorViewModel = CalculatorViewModel()) {
+        self.viewModel = viewModel
+    }
 
     var body: some View {
         VStack {
             VStack {
                 HStack {
                     Text("Ride Type:")
-                    Picker(selection: $rideType, label: Text("")) {
+                    Picker(selection: $viewModel.rideType, label: Text("")) {
                         ForEach(RideType.allCases, id: \.self) {
                             Text($0.rawValue).tag($0)
                         }
@@ -42,25 +39,25 @@ struct ContentView: View {
                             .frame(height: 32)
                     }
                     VStack(alignment: .leading, spacing: 10) {
-                        TextField("0.00", text: $excitement)
+                        TextField("0.00", text: $viewModel.excitement)
                             .padding(.trailing, 10)
                             .padding([.leading, .vertical], 5)
                             .border(Color.gray)
-                        TextField("0.00", text: $intensity)
+                        TextField("0.00", text: $viewModel.intensity)
                             .padding(.all, 5)
                             .border(Color.gray)
-                        TextField("0.00", text: $nausea)
+                        TextField("0.00", text: $viewModel.nausea)
                             .padding(.all, 5)
                             .border(Color.gray)
                     }
                 }
                 HStack {
-                    CheckView(isChecked: $hasSameTypeInPark, title: "Same type in park?")
+                    CheckView(isChecked: $viewModel.hasSameTypeInPark, title: "Same type in park?")
                     Spacer()
                 }
                     .frame(height: 32)
                 HStack {
-                    CheckView(isChecked: $isChargingEntryForPark, title: "Charge entry for park?")
+                    CheckView(isChecked: $viewModel.isChargingEntryForPark, title: "Charge entry for park?")
                     Spacer()
                 }
                     .frame(height: 32)
@@ -68,7 +65,7 @@ struct ContentView: View {
                 .padding()
                 .border(Color.gray)
             VStack {
-                Text(rideType.rawValue)
+                Text(viewModel.rideType.rawValue)
                     .font(.headline)
                 HStack(spacing: 0) {
                     List {
@@ -84,7 +81,7 @@ struct ContentView: View {
                     List {
                         Section(header: Text("Max OpenRCT2 Price")) {
                             ForEach(RideAge.allCases, id: \.self) {
-                                Text("$\(self.price(for: $0).openRCT2)")
+                                Text("$\(self.viewModel.price(for: $0).openRCT2)")
                             }
                         }
                     }
@@ -93,7 +90,7 @@ struct ContentView: View {
                     List {
                         Section(header: Text("Max RCT1/RCT2/RCTC Price")) {
                             ForEach(RideAge.allCases, id: \.self) {
-                                Text("$\(self.price(for: $0).otherRCT)")
+                                Text("$\(self.viewModel.price(for: $0).otherRCT)")
                             }
                         }
                     }
@@ -107,48 +104,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-    }
-}
-
-// MARK: - Helpers
-private extension ContentView {
-    func price(for age: RideAge) -> (openRCT2: String, otherRCT: String) {
-        let numericValues = priceCalculator.prices(
-            rideType: rideType,
-            excitement: Double(excitement) ?? 0,
-            intensity: Double(intensity) ?? 0,
-            nausea: Double(nausea) ?? 0,
-            hasSameTypeInPark: hasSameTypeInPark,
-            isChargingEntryForPark: isChargingEntryForPark,
-            rideAge: age
-        )
-
-        let openRCT2 = String(format: "%.2f", numericValues.openRCT2)
-        let otherRCT = String(format: "%.2f", numericValues.otherRCT)
-
-        return (openRCT2, otherRCT)
-    }
-}
-
-// TODO: make its own file
-private struct CheckView: View {
-    @Binding var isChecked: Bool
-    var title:String
-    private var image: String { isChecked ? "checkmark.square.fill": "square" }
-    private var imageColor: Color { isChecked ? .blue : .gray }
-
-    func toggle() { isChecked.toggle() }
-
-    var body: some View {
-        Button(action: toggle) {
-            HStack {
-                Text(title).foregroundColor(.black)
-                Image(systemName: image)
-                    .foregroundColor(imageColor)
-            }
-        }
+        CalculatorView(viewModel: CalculatorViewModel())
     }
 }
