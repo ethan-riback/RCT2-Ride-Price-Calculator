@@ -10,7 +10,18 @@ import Foundation
 import Combine
 import SwiftUI
 
-class CalculatorViewModel: ObservableObject {
+protocol CalculatorViewModelType: ObservableObject {
+    var rideType: RideType { get set }
+    var excitement: String { get set }
+    var intensity: String { get set }
+    var nausea: String { get set }
+    var hasSameTypeInPark: Bool { get set }
+    var isChargingEntryForPark: Bool { get set }
+
+    func price(for age: RideAge) -> (openRCT2: String, otherRCT: String)
+}
+
+final class CalculatorViewModel: CalculatorViewModelType {
     @Published var rideType: RideType = .selectARide
     @Published var excitement: String = ""
     @Published var intensity = ""
@@ -41,4 +52,3 @@ class CalculatorViewModel: ObservableObject {
         return (openRCT2, otherRCT)
     }
 }
-

@@ -9,10 +9,10 @@
 import Combine
 import SwiftUI
 
-struct CalculatorView: View {
-    @ObservedObject var viewModel: CalculatorViewModel
+struct CalculatorView<ViewModel: CalculatorViewModelType>: View {
+    @ObservedObject var viewModel: ViewModel
 
-    init(viewModel: CalculatorViewModel = CalculatorViewModel()) {
+    init(viewModel: ViewModel) {
         self.viewModel = viewModel
     }
 
@@ -101,6 +101,12 @@ struct CalculatorView: View {
                 Spacer()
             }
         }
+    }
+}
+
+extension CalculatorView where ViewModel == CalculatorViewModel {
+    init() {
+        self.init(viewModel: CalculatorViewModel())
     }
 }
 
