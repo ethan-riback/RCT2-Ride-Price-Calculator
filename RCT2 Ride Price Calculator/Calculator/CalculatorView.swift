@@ -12,10 +12,6 @@ import SwiftUI
 struct CalculatorView<ViewModel: CalculatorViewModelType>: View {
     @ObservedObject var viewModel: ViewModel
 
-    init(viewModel: ViewModel) {
-        self.viewModel = viewModel
-    }
-
     var body: some View {
         VStack {
             VStack {
@@ -30,18 +26,7 @@ struct CalculatorView<ViewModel: CalculatorViewModelType>: View {
                 .font(.headline)
             CalculationTableView(viewModel: viewModel)
         }
-    }
-}
-
-extension CalculatorView where ViewModel == CalculatorViewModel {
-    init() {
-        self.init(viewModel: CalculatorViewModel())
-    }
-}
-
-struct CalculatorView_Previews: PreviewProvider {
-    static var previews: some View {
-        CalculatorView(viewModel: CalculatorViewModel())
+            .accessibility(value: Text("CalculatorView"))
     }
 }
 
@@ -49,10 +34,6 @@ struct CalculatorView_Previews: PreviewProvider {
 
 private struct RideTypeSelectionView: View {
     @Binding var rideType: RideType
-
-    init(rideType: Binding<RideType>) {
-        _rideType = rideType
-    }
 
     var body: some View {
         HStack {
@@ -72,12 +53,6 @@ private struct RideValuesView: View {
     @Binding var excitement: String
     @Binding var intensity: String
     @Binding var nausea: String
-
-    init(excitement: Binding<String>, intensity: Binding<String>, nausea: Binding<String>) {
-        _excitement = excitement
-        _intensity = intensity
-        _nausea = nausea
-    }
 
     var body: some View {
         HStack {
@@ -108,10 +83,6 @@ private struct RideValuesView: View {
 private struct RideTypeCheckView: View {
     @Binding var hasSameTypeInPark: Bool
 
-    init(hasSameTypeInPark: Binding<Bool>) {
-        _hasSameTypeInPark = hasSameTypeInPark
-    }
-
     var body: some View {
         HStack {
             CheckView(isChecked: $hasSameTypeInPark, title: "Same type in park?")
@@ -124,10 +95,6 @@ private struct RideTypeCheckView: View {
 private struct EntryChargeCheckView: View {
     @Binding var isChargingEntryForPark: Bool
 
-    init(isChargingEntryForPark: Binding<Bool>) {
-        _isChargingEntryForPark = isChargingEntryForPark
-    }
-
     var body: some View {
         HStack {
             CheckView(isChecked: $isChargingEntryForPark, title: "Charge entry for park?")
@@ -139,10 +106,6 @@ private struct EntryChargeCheckView: View {
 
 private struct CalculationTableView<ViewModel: CalculatorViewModelType>: View {
     @ObservedObject var viewModel: ViewModel
-
-    init(viewModel: ViewModel) {
-        self.viewModel = viewModel
-    }
 
     var body: some View {
         List {
@@ -176,11 +139,6 @@ private struct CalculationRowView<ViewModel: CalculatorViewModelType>: View {
     var rideAge: RideAge
     @ObservedObject var viewModel: ViewModel
 
-    init(rideAge: RideAge, viewModel: ViewModel) {
-        self.rideAge = rideAge
-        self.viewModel = viewModel
-    }
-
     var body: some View {
         HStack {
             Text(rideAge.rawValue)
@@ -191,5 +149,13 @@ private struct CalculationRowView<ViewModel: CalculatorViewModelType>: View {
             Divider()
             Text("$\(viewModel.price(for: rideAge).otherRCT)")
         }
+    }
+}
+
+// MARK: Preview
+
+struct CalculatorView_Previews: PreviewProvider {
+    static var previews: some View {
+        CalculatorView(viewModel: CalculatorViewModel())
     }
 }

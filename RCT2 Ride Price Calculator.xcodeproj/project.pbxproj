@@ -10,18 +10,27 @@
 		EA567D0524C0E41400952A83 /* RideAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA567D0424C0E41400952A83 /* RideAge.swift */; };
 		EA567D0924C0E51D00952A83 /* CheckView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA567D0824C0E51D00952A83 /* CheckView.swift */; };
 		EA567D0B24C0E5EB00952A83 /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA567D0A24C0E5EB00952A83 /* CalculatorViewModel.swift */; };
+		EA6D385B250C0BDD00349B15 /* RCT2_Ride_Price_CalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D385A250C0BDD00349B15 /* RCT2_Ride_Price_CalculatorUITests.swift */; };
+		EA6D3863250C0C1300349B15 /* RCT2_Ride_Price_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACC04247ECEE0008BC52E /* RCT2_Ride_Price_CalculatorTests.swift */; };
+		EA6D3865250C0C4100349B15 /* CalculatorViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6D3864250C0C4100349B15 /* CalculatorViewUITests.swift */; };
 		EA8ACBEE247ECEDF008BC52E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACBED247ECEDF008BC52E /* AppDelegate.swift */; };
 		EA8ACBF0247ECEDF008BC52E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACBEF247ECEDF008BC52E /* SceneDelegate.swift */; };
 		EA8ACBF2247ECEDF008BC52E /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACBF1247ECEDF008BC52E /* CalculatorView.swift */; };
 		EA8ACBF4247ECEE0008BC52E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA8ACBF3247ECEE0008BC52E /* Assets.xcassets */; };
 		EA8ACBF7247ECEE0008BC52E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA8ACBF6247ECEE0008BC52E /* Preview Assets.xcassets */; };
 		EA8ACBFA247ECEE0008BC52E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA8ACBF8247ECEE0008BC52E /* LaunchScreen.storyboard */; };
-		EA8ACC05247ECEE0008BC52E /* RCT2_Ride_Price_CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACC04247ECEE0008BC52E /* RCT2_Ride_Price_CalculatorTests.swift */; };
 		EA8ACC10247EE470008BC52E /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACC0F247EE470008BC52E /* RideType.swift */; };
 		EA8ACC12247EFBA2008BC52E /* PriceCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8ACC11247EFBA2008BC52E /* PriceCalculator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EA6D385D250C0BDD00349B15 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA8ACBE2247ECEDF008BC52E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA8ACBE9247ECEDF008BC52E;
+			remoteInfo = "RCT2 Ride Price Calculator";
+		};
 		EA8ACC01247ECEE0008BC52E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EA8ACBE2247ECEDF008BC52E /* Project object */;
@@ -35,6 +44,10 @@
 		EA567D0424C0E41400952A83 /* RideAge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideAge.swift; sourceTree = "<group>"; };
 		EA567D0824C0E51D00952A83 /* CheckView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckView.swift; sourceTree = "<group>"; };
 		EA567D0A24C0E5EB00952A83 /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
+		EA6D3858250C0BDD00349B15 /* RCT2 Ride Price CalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "RCT2 Ride Price CalculatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA6D385A250C0BDD00349B15 /* RCT2_Ride_Price_CalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RCT2_Ride_Price_CalculatorUITests.swift; sourceTree = "<group>"; };
+		EA6D385C250C0BDD00349B15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA6D3864250C0C4100349B15 /* CalculatorViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewUITests.swift; sourceTree = "<group>"; };
 		EA8ACBEA247ECEDF008BC52E /* RCT2 Ride Price Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RCT2 Ride Price Calculator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA8ACBED247ECEDF008BC52E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA8ACBEF247ECEDF008BC52E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +64,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EA6D3855250C0BDD00349B15 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA8ACBE7247ECEDF008BC52E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,11 +115,22 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		EA6D3859250C0BDD00349B15 /* RCT2 Ride Price CalculatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA6D3864250C0C4100349B15 /* CalculatorViewUITests.swift */,
+				EA6D385A250C0BDD00349B15 /* RCT2_Ride_Price_CalculatorUITests.swift */,
+				EA6D385C250C0BDD00349B15 /* Info.plist */,
+			);
+			path = "RCT2 Ride Price CalculatorUITests";
+			sourceTree = "<group>";
+		};
 		EA8ACBE1247ECEDF008BC52E = {
 			isa = PBXGroup;
 			children = (
 				EA8ACBEC247ECEDF008BC52E /* RCT2 Ride Price Calculator */,
 				EA8ACC03247ECEE0008BC52E /* RCT2 Ride Price CalculatorTests */,
+				EA6D3859250C0BDD00349B15 /* RCT2 Ride Price CalculatorUITests */,
 				EA8ACBEB247ECEDF008BC52E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -109,6 +140,7 @@
 			children = (
 				EA8ACBEA247ECEDF008BC52E /* RCT2 Ride Price Calculator.app */,
 				EA8ACC00247ECEE0008BC52E /* RCT2 Ride Price CalculatorTests.xctest */,
+				EA6D3858250C0BDD00349B15 /* RCT2 Ride Price CalculatorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,6 +181,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EA6D3857250C0BDD00349B15 /* RCT2 Ride Price CalculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA6D385F250C0BDD00349B15 /* Build configuration list for PBXNativeTarget "RCT2 Ride Price CalculatorUITests" */;
+			buildPhases = (
+				EA6D3854250C0BDD00349B15 /* Sources */,
+				EA6D3855250C0BDD00349B15 /* Frameworks */,
+				EA6D3856250C0BDD00349B15 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA6D385E250C0BDD00349B15 /* PBXTargetDependency */,
+			);
+			name = "RCT2 Ride Price CalculatorUITests";
+			productName = "RCT2 Ride Price CalculatorUITests";
+			productReference = EA6D3858250C0BDD00349B15 /* RCT2 Ride Price CalculatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		EA8ACBE9247ECEDF008BC52E /* RCT2 Ride Price Calculator */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA8ACC09247ECEE0008BC52E /* Build configuration list for PBXNativeTarget "RCT2 Ride Price Calculator" */;
@@ -190,10 +240,14 @@
 		EA8ACBE2247ECEDF008BC52E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1140;
+				LastSwiftUpdateCheck = 1150;
 				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Ethan Riback";
 				TargetAttributes = {
+					EA6D3857250C0BDD00349B15 = {
+						CreatedOnToolsVersion = 11.5;
+						TestTargetID = EA8ACBE9247ECEDF008BC52E;
+					};
 					EA8ACBE9247ECEDF008BC52E = {
 						CreatedOnToolsVersion = 11.4;
 					};
@@ -218,11 +272,19 @@
 			targets = (
 				EA8ACBE9247ECEDF008BC52E /* RCT2 Ride Price Calculator */,
 				EA8ACBFF247ECEE0008BC52E /* RCT2 Ride Price CalculatorTests */,
+				EA6D3857250C0BDD00349B15 /* RCT2 Ride Price CalculatorUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EA6D3856250C0BDD00349B15 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA8ACBE8247ECEDF008BC52E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -243,6 +305,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EA6D3854250C0BDD00349B15 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA6D3865250C0C4100349B15 /* CalculatorViewUITests.swift in Sources */,
+				EA6D385B250C0BDD00349B15 /* RCT2_Ride_Price_CalculatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA8ACBE6247ECEDF008BC52E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -262,13 +333,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA8ACC05247ECEE0008BC52E /* RCT2_Ride_Price_CalculatorTests.swift in Sources */,
+				EA6D3863250C0C1300349B15 /* RCT2_Ride_Price_CalculatorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EA6D385E250C0BDD00349B15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA8ACBE9247ECEDF008BC52E /* RCT2 Ride Price Calculator */;
+			targetProxy = EA6D385D250C0BDD00349B15 /* PBXContainerItemProxy */;
+		};
 		EA8ACC02247ECEE0008BC52E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EA8ACBE9247ECEDF008BC52E /* RCT2 Ride Price Calculator */;
@@ -288,6 +364,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EA6D3860250C0BDD00349B15 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "RCT2 Ride Price CalculatorUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ethan-Riback.RCT2-Ride-Price-CalculatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "RCT2 Ride Price Calculator";
+			};
+			name = Debug;
+		};
+		EA6D3861250C0BDD00349B15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "RCT2 Ride Price CalculatorUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Ethan-Riback.RCT2-Ride-Price-CalculatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "RCT2 Ride Price Calculator";
+			};
+			name = Release;
+		};
 		EA8ACC07247ECEE0008BC52E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -489,6 +603,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EA6D385F250C0BDD00349B15 /* Build configuration list for PBXNativeTarget "RCT2 Ride Price CalculatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA6D3860250C0BDD00349B15 /* Debug */,
+				EA6D3861250C0BDD00349B15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		EA8ACBE5247ECEDF008BC52E /* Build configuration list for PBXProject "RCT2 Ride Price Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
