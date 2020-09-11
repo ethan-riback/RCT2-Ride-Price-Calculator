@@ -19,87 +19,16 @@ struct CalculatorView<ViewModel: CalculatorViewModelType>: View {
     var body: some View {
         VStack {
             VStack {
-                HStack {
-                    Text("Ride Type:")
-                    Picker(selection: $viewModel.rideType, label: Text("")) {
-                        ForEach(RideType.allCases, id: \.self) {
-                            Text($0.rawValue).tag($0)
-                        }
-                    }
-                        .frame(height: 75)
-                        .clipped()
-                }
-                HStack {
-                    VStack(alignment: .leading, spacing: 10) {
-                        Text("Excitement:")
-                            .frame(height: 32)
-                        Text("Intensity:")
-                            .frame(height: 32)
-                        Text("Nausea:")
-                            .frame(height: 32)
-                    }
-                    VStack(alignment: .leading, spacing: 10) {
-                        TextField("0.00", text: $viewModel.excitement)
-                            .padding(.trailing, 10)
-                            .padding([.leading, .vertical], 5)
-                            .border(Color.gray)
-                        TextField("0.00", text: $viewModel.intensity)
-                            .padding(.all, 5)
-                            .border(Color.gray)
-                        TextField("0.00", text: $viewModel.nausea)
-                            .padding(.all, 5)
-                            .border(Color.gray)
-                    }
-                }
-                HStack {
-                    CheckView(isChecked: $viewModel.hasSameTypeInPark, title: "Same type in park?")
-                    Spacer()
-                }
-                    .frame(height: 32)
-                HStack {
-                    CheckView(isChecked: $viewModel.isChargingEntryForPark, title: "Charge entry for park?")
-                    Spacer()
-                }
-                    .frame(height: 32)
+                RideTypeSelectionView(rideType: $viewModel.rideType)
+                RideValuesView(excitement: $viewModel.excitement, intensity: $viewModel.intensity, nausea: $viewModel.nausea)
+                RideTypeCheckView(hasSameTypeInPark: $viewModel.hasSameTypeInPark)
+                EntryChargeCheckView(isChargingEntryForPark: $viewModel.isChargingEntryForPark)
             }
                 .padding()
                 .border(Color.gray)
-            VStack {
-                Text(viewModel.rideType.rawValue)
-                    .font(.headline)
-                HStack(spacing: 0) {
-                    List {
-                        Section(header: Text("Ride Age (Months)")) {
-                            ForEach(RideAge.allCases, id: \.self) {
-                                Text($0.rawValue)
-                            }
-                        }
-                    }
-                        .frame(width: 100)
-                        .listStyle(GroupedListStyle())
-                    Divider()
-                    List {
-                        Section(header: Text("Max OpenRCT2 Price")) {
-                            ForEach(RideAge.allCases, id: \.self) {
-                                Text("$\(self.viewModel.price(for: $0).openRCT2)")
-                            }
-                        }
-                    }
-                        .listStyle(GroupedListStyle())
-                    Divider()
-                    List {
-                        Section(header: Text("Max RCT1/RCT2/RCTC Price")) {
-                            ForEach(RideAge.allCases, id: \.self) {
-                                Text("$\(self.viewModel.price(for: $0).otherRCT)")
-                            }
-                        }
-                    }
-                        .listStyle(GroupedListStyle())
-                }
-                    .border(Color.gray)
-                    .clipped()
-                Spacer()
-            }
+            Text(viewModel.rideType.rawValue)
+                .font(.headline)
+            CalculationTableView(viewModel: viewModel)
         }
     }
 }
@@ -113,5 +42,154 @@ extension CalculatorView where ViewModel == CalculatorViewModel {
 struct CalculatorView_Previews: PreviewProvider {
     static var previews: some View {
         CalculatorView(viewModel: CalculatorViewModel())
+    }
+}
+
+// MARK: View Helpers
+
+private struct RideTypeSelectionView: View {
+    @Binding var rideType: RideType
+
+    init(rideType: Binding<RideType>) {
+        _rideType = rideType
+    }
+
+    var body: some View {
+        HStack {
+            Text("Ride Type:")
+            Picker(selection: $rideType, label: Text("")) {
+                ForEach(RideType.allCases, id: \.self) {
+                    Text($0.rawValue).tag($0)
+                }
+            }
+                .frame(width: 290, height: 75)
+                .clipped()
+        }
+    }
+}
+
+private struct RideValuesView: View {
+    @Binding var excitement: String
+    @Binding var intensity: String
+    @Binding var nausea: String
+
+    init(excitement: Binding<String>, intensity: Binding<String>, nausea: Binding<String>) {
+        _excitement = excitement
+        _intensity = intensity
+        _nausea = nausea
+    }
+
+    var body: some View {
+        HStack {
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Excitement:")
+                    .frame(height: 32)
+                Text("Intensity:")
+                    .frame(height: 32)
+                Text("Nausea:")
+                    .frame(height: 32)
+            }
+            VStack(alignment: .leading, spacing: 10) {
+                TextField("0.00", text: $excitement)
+                    .padding(.trailing, 10)
+                    .padding([.leading, .vertical], 5)
+                    .border(Color.gray)
+                TextField("0.00", text: $intensity)
+                    .padding(.all, 5)
+                    .border(Color.gray)
+                TextField("0.00", text: $nausea)
+                    .padding(.all, 5)
+                    .border(Color.gray)
+            }
+        }
+    }
+}
+
+private struct RideTypeCheckView: View {
+    @Binding var hasSameTypeInPark: Bool
+
+    init(hasSameTypeInPark: Binding<Bool>) {
+        _hasSameTypeInPark = hasSameTypeInPark
+    }
+
+    var body: some View {
+        HStack {
+            CheckView(isChecked: $hasSameTypeInPark, title: "Same type in park?")
+            Spacer()
+        }
+            .frame(height: 32)
+    }
+}
+
+private struct EntryChargeCheckView: View {
+    @Binding var isChargingEntryForPark: Bool
+
+    init(isChargingEntryForPark: Binding<Bool>) {
+        _isChargingEntryForPark = isChargingEntryForPark
+    }
+
+    var body: some View {
+        HStack {
+            CheckView(isChecked: $isChargingEntryForPark, title: "Charge entry for park?")
+            Spacer()
+        }
+            .frame(height: 32)
+    }
+}
+
+private struct CalculationTableView<ViewModel: CalculatorViewModelType>: View {
+    @ObservedObject var viewModel: ViewModel
+
+    init(viewModel: ViewModel) {
+        self.viewModel = viewModel
+    }
+
+    var body: some View {
+        List {
+            Section(header: CalculationHeaderView()) {
+                ForEach(RideAge.allCases, id: \.self) {
+                    CalculationRowView(rideAge: $0, viewModel: self.viewModel)
+                }
+            }
+        }
+            .listStyle(GroupedListStyle())
+            .border(Color.gray)
+            .clipped()
+    }
+}
+
+private struct CalculationHeaderView: View {
+    var body: some View {
+        HStack {
+            Text("Ride Age (Months)")
+                .frame(width: 75, height: nil, alignment: .leading)
+            Divider()
+            Text("Max OpenRCT2 Price")
+                .frame(width: 150, height: nil, alignment: .leading)
+            Divider()
+            Text("Max RCT1/RCT2/RCTC Price")
+        }
+    }
+}
+
+private struct CalculationRowView<ViewModel: CalculatorViewModelType>: View {
+    var rideAge: RideAge
+    @ObservedObject var viewModel: ViewModel
+
+    init(rideAge: RideAge, viewModel: ViewModel) {
+        self.rideAge = rideAge
+        self.viewModel = viewModel
+    }
+
+    var body: some View {
+        HStack {
+            Text(rideAge.rawValue)
+                .frame(width: 75, height: nil, alignment: .leading)
+            Divider()
+            Text("$\(viewModel.price(for: rideAge).openRCT2)")
+                .frame(width: 150, height: nil, alignment: .leading)
+            Divider()
+            Text("$\(viewModel.price(for: rideAge).otherRCT)")
+        }
     }
 }
